@@ -27,4 +27,6 @@ artifacts:
   files:
     - '**/*'
   base-directory: codepipeline-demo
+  name: dev-artifacts
+  discard-paths: no
 
