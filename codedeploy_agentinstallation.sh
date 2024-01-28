@@ -16,3 +16,4 @@ chmod +x ./install
 sudo ./install auto
 systemctl start codedeploy-agent
 systemctl status codedeploy-agent
+echo "script finished"
