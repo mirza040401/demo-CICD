@@ -14,8 +14,6 @@ phases:
       - pip install -r requirements.txt
   build:
     commands:
-      build:
-  commands:
     - docker build -t my-app .
     - docker tag my-app:latest $DOCKER_REGISTRY_USERNAME/my-app:latest
 post_build:
