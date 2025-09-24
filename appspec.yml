@@ -1,12 +1,14 @@
 version: 0.0
 os: linux
-
+files:
+  - source: /
+    destination: /home/ec2-user/myapp
 hooks:
-  ApplicationStop:
-    - location: stop_container.sh
-      timeout: 300
-      runas: root
   AfterInstall:
-    - location: start_container.sh
-      timeout: 300
-      runas: root
+    - location: scripts/install_dependencies.sh
+      timeout: 180
+      runas: ec2-user
+  ApplicationStart:
+    - location: scripts/start_docker.sh
+      timeout: 180
+      runas: ec2-user
