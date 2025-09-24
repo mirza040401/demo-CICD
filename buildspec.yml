@@ -10,7 +10,7 @@ phases:
       python: 3.12
   pre_build:
     commands:
-      - echo "Installing dependencies....."
+      - echo "Installing dependencies......."
       - pip install -r requirements.txt
   build:
     commands:
